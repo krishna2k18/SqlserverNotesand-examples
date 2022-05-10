@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://www.dofactory.com/sql/examples -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Examples - Dofactory</title>
+    <meta name="keywords" content="SQL, SQL Server, Data Analysis, Tutorial, Reference, Guide, Examples, Demos, Top, Best, Tips, Advice, Training, Learning, Courses, Lessons, Interview, Programming, Code, Source">
+    <meta name="description" content="SQL Examples of SELECT, INSERT, UPDATE, DELETE">
+
+    <link rel="icon" href="https://www.dofactory.com/favicon.ico">
+    <link rel="canonical" href="https://www.dofactory.com/sql/examples">
+
+
+    
+    
+
+    
+        <link rel="stylesheet" href="./SQL Examples - Dofactory_files/bootstrap.min.css">
+        <link rel="stylesheet" href="./SQL Examples - Dofactory_files/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="./SQL Examples - Dofactory_files/simple-line-icons.min.css">
+        <link rel="stylesheet" href="./SQL Examples - Dofactory_files/prettify.css">
+        <link rel="stylesheet" href="./SQL Examples - Dofactory_files/app.min.css">
+
+    
+
+
+
+</head>
+
+<body>
+
+    
+  <header class="navbar navbar-expand-lg py-0 pl-0 do-navbar" style="height: 80px; background: #fff !important; box-shadow: rgba(103,190,200,.1) 0 4px 24px 0; border-bottom: 1px solid #d5e7eb; ">
+
+    <div class="width-240">
+      <a class="pl-27 pt-0 width-220 d-block" href="https://www.dofactory.com/">
+        <img src="./SQL Examples - Dofactory_files/dofactorylogo.png" height="44" class="no-outline">
+      </a>
+    </div>
+
+    <button class="navbar-toggler" type="button" onclick="window.scrollTo(0, 0);" data-toggle="collapse" data-target="#small-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon pt-3"><i class="icon-menu font-24"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbar-content" style="border-bottom: 0px solid #ddd;">
+      <ul class="navbar-nav xml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarProducts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" style="width:600px;" aria-labelledby="navbarProducts">
+            <div class="d-flex p-10">
+
+              <div class="width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="https://www.dofactory.com/products/dofactory-net"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="./SQL Examples - Dofactory_files/n.png" width="32" class="xpt-2"></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory .NET</div><div class="font-13">#1 .NET Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="https://www.dofactory.com/products/dofactory-sql"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="./SQL Examples - Dofactory_files/s.png" width="32" class="xpt-2"></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory SQL</div><div class="font-13">#1 SQL Success Platform</div></div></div></a>
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="https://www.dofactory.com/products/dofactory-js"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="./SQL Examples - Dofactory_files/j.png" width="32" class="xpt-2"></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory JS</div><div class="font-13">#1 JS Success Platform</div></div></div></a>
+                <span class="d-block height-10"></span>
+
+              </div>
+              <div class="pl-20 width-270">
+                <a class="dropdown-item py-7 pl-20 border-0 my-5" href="https://www.dofactory.com/products/dofactory-bundle"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="./SQL Examples - Dofactory_files/b.png" width="32" class="xpt-2"></div><div class="pl-14 pt-1"><div class="font-16 font-weight-semibold">Dofactory Bundle</div><div class="font-13">The Complete Package</div></div></div></a>
+                <div class="dropdown-divider "></div>
+                <a class="dropdown-item pt-7 pb-15 pl-20 border-0 my-5" href="https://www.dofactory.com/products"><div class="d-flex flex-row width-200"><div class="pt-3"><img src="./SQL Examples - Dofactory_files/all.png" width="40" class="xpt-2"></div><div class="pl-10 pt-1"><div class="font-16 font-weight-semibold">All Products</div><div class="font-13">Product overview</div></div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarShowcases" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Demos&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarShowcases">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/showcases/analytics">Analytics</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/showcases/ecommerce">Ecommerce</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/showcases/saas">SaaS</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/showcases/crm">CRM</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/showcases/app-factory">33-Day App Factory</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.dofactory.com/showcases">Overview</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarPricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pricing&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarPricing">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/pricing">Product Pricing</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/pricing/bundle">Bundle Pricing</a>
+            <div class="dropdown-divider "></div>
+            <a class="dropdown-item" href="https://www.dofactory.com/pricing/compare">Compare Editions</a>
+            <span class="height-10 d-block"></span>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarTutorials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tutorials&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu  dropdown-menu-on-hover dropdown-menu-border width-200" aria-labelledby="navbarTutorials">
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/tutorials">Overview</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.dofactory.com/sql">SQL Tutorial</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/sql/reference">SQL Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/net/design-patterns">C# Design Patterns</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/csharp-coding-standards">C# Coding Standards</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/html">HTML Tutorial</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/html/ref">HTML Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/css">CSS Tutorial</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/css/ref">CSS Reference</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/javascript">JavaScript Tutorial</a>
+            <span class="height-10 d-block"></span>
+            <a class="dropdown-item" href="https://www.dofactory.com/connection-strings">Connection Strings</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/visual-studio-shortcuts">Visual Studio Shortcuts</a>
+
+          </div>
+        </li>
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link ignore-click" href="javascript:void(0);" id="navbarAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="span-underline">Company</span>&nbsp;<i class="icon-arrow-down font-8"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-on-hover dropdown-menu-border" aria-labelledby="navbarAbout">
+            <a class="dropdown-item" href="https://www.dofactory.com/about">About Us</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/story">Our Story</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/customers">Customers</a>
+            <a class="dropdown-item" href="https://www.dofactory.com/contact">Contact Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://www.dofactory.com/faq">FAQs</a>
+          </div>
+        </li>
+
+      </ul>
+
+
+
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+
+
+        <li class="nav-item mr-15" style="color: #fff3f3;">
+          <a class="nav-link" style="padding-top:22px !important; padding-bottom: 13px !important;" href="https://www.dofactory.com/cart">
+            <span class="position-relative">
+              <img title="Cart" src="./SQL Examples - Dofactory_files/cart.png" style="width: 25px;">
+              <span title="Cart" class="position-absolute font-14 rounded-circle text-center" style="width:17px;top:-11px;left:6px;font-weight:normal;color:#555;font-weight:500; ">
+                0
+              </span>
+            </span>
+          </a>
+        </li>
+
+
+      </ul>
+        <div>
+          <a class="btn btn-outline-green width-80 mr-14" href="https://www.dofactory.com/login">Login</a>
+          <a class="btn btn-join " href="https://www.dofactory.com/join">Create account</a>&nbsp;&nbsp;
+        </div>
+
+    </div>
+
+  </header>
+  <div class="collapse navbar-collapse hide" id="small-content">
+    <ul class="navbar-nav mr-auto bg-dark font-13">
+      <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/products">Products</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/showcases">Showcases</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/pricing">Pricing</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/tutorials">Tutorials</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/about">Company</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/join">Join</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-small" href="https://www.dofactory.com/login">Login</a></li>
+
+    </ul>
+  </div>
+
+
+    <div class="container-fluid">
+        <style>
+
+  /* ==============
+       Sql tutorial
+    =================*/
+
+  table.table-model { border-collapse: collapse; width: 170px; }
+
+  table.table-model tr > td,
+  table.table-model tr > th { padding: 3px 25px; color: #666; font-size: 15px; border: 3px solid #666; }
+
+  table.table-model tr > th { background: #e3e5ed; color: #444; font-weight: bold; }
+
+  .key { background: white url(/img/key.png) center right 12px no-repeat; }
+
+  h2 { font-size: 28px; }
+  h2.h2-first { font-size: 26px; padding: 27px 0 0 25px; font-weight:500; }
+
+  pre { font-weight: bold; }
+
+
+  ol.linenums li { line-height: 22px; }
+
+  .prettyprint { font-size: 16px; }
+
+  .kwd { color: #0b7490; }
+
+  .lit, .str { color: #cc4500; }
+
+  .tutorial hr { margin-top: 65px; margin-bottom: 5px; }
+
+  .tutorial div.items p { margin: 6px 0 6px 22px; line-height: 27px; }
+
+  /*  .bg-cream-100 { background-color: #f6f8fd !important; }
+  .bg-cream-100 th { background-color: #e8edf8 !important; }*/
+  /*.bg-cream-100 { background-color: #f6f7fb !important; }
+  .bg-cream-100 th { background-color: #eef1f7 !important; }*/
+  .bg-cream-100 { background-color: #fff !important; }
+  .bg-cream-100 th { background-color: #f3f3f7 !important; }
+  .bg-cream-100 td { background-color: #fafafe !important; }
+
+
+  /*.tutorial .table td, .tutorial .table th { border-color: #a1a3a5 !important; }*/
+  .tutorial .table td, .tutorial .table th { border-color: #c1c3c5 !important; }
+
+  /* enables autoscroll in flex and grid */
+  div { min-width: 0; }
+
+
+  .rose-dash { border-bottom: 2px dashed #ba675c; }
+  /* highlight for null value in a table. #f45d49;*/
+
+  .tutorial div.items p:first-child { margin-top: 35px !important; }
+
+  h2.more-examples { font-weight: 500; font-size: 20px; margin-bottom: 50px; margin-top: 0; }
+
+  td.null { background-color: #fefce5 !important; font-size: 16px; }
+
+  /* test */
+  /*code { font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; xfont-size: 13.6px; xcolor: rgb(87, 96, 106); background-color: xrgba(175, 184, 193, 0.2); }*/
+  /*b { font-weight:500 !important;}*/
+
+ /* dev also ask sections */
+
+  .click {
+    background: #f0f3f7;
+    color: black;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+    margin: 10px 0 0 0 !important;
+    padding: 12px 12px 12px 30px !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    position: relative;
+  }
+
+  .click i {
+    color: #6f6363;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  .answer {
+    display: none;
+    margin-bottom: 40px;
+    margin-left: 1px;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+    transition: .5s;
+  }
+
+  .rotate-reset {
+    transform: rotate(0deg);
+    transition: .5s;
+  }
+
+  h2 i {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+  }
+
+</style>
+<link rel="stylesheet" href="./SQL Examples - Dofactory_files/responsive.css">
+
+
+<div class="row d-flex">
+
+  <div class="tutorial-menu">
+
+    
+<style>
+
+  a.list-group-item code { font-size: 15px; color: #9a3e24 !important; background: #f5f6f7 !important; word-break: break-word; }
+  a.list-group-item:hover code, a.list-group-item.active code { background: transparent !important; }
+
+  .tutorial-choice { transform: translateX(-50%); }
+
+  .check-empty { display: inline-block; margin-bottom:2px; height: 15px; width: 15px; border: 3px solid #555; border-radius: 50%; vertical-align:bottom; }
+  .check-fill { background-color: orangered; height: 15px; width: 15px; border: 2px solid #555; }
+</style>
+
+<div style="width: 230px !important; overflow-x: hidden; ">
+  <div id="switcher" class="d-flex" style="width: 460px; transition-delay: 0s;transition-duration:0.5s;transition-property:transform; transition-timing-function: ease-in-out; will-change:transform;">
+
+    <div class="">
+      <div class="height-70 pl-15 pt-27">
+
+        <div>
+          <div class="pr-7 pt-2"><a class="font-16 no-underline darker-link font-weight-semibold" onclick="$(&#39;#switcher&#39;).addClass(&#39;tutorial-choice&#39;);" href="javacript:void(0)">All Tutorials &nbsp;<img class="align-baseline" src="./SQL Examples - Dofactory_files/arrow-right.jpg"></a></div>
+        </div>
+      </div>
+
+      <div id="menu-title" class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #dfe7ff; background-color: #345; color: white;">
+        SQL Tutorial&nbsp;
+      </div>
+
+      <nav class="width-230 do-links" id="scroll-list">
+
+        <div class="list-group mb-25 font-14 mt-1" tabindex="-1" role="tablist" id="list-tab">
+              <a id="item-0" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql">SQL Tutorial</a>
+                <div class="height-1"></div>
+              <a id="item-1" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/intro">SQL Intro</a>
+                <div class="height-1"></div>
+              <a id="item-2" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/syntax">SQL Syntax</a>
+                <div class="height-1"></div>
+              <a id="item-3" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/select">SQL Select</a>
+                <div class="height-1"></div>
+              <a id="item-4" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where">SQL Where</a>
+                <div class="height-1"></div>
+              <a id="item-5" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/insert">SQL Insert</a>
+                <div class="height-1"></div>
+              <a id="item-6" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/update">SQL Update</a>
+                <div class="height-1"></div>
+              <a id="item-7" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/delete">SQL Delete</a>
+                <div class="height-1"></div>
+              <a id="item-8" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/order-by">SQL Order By</a>
+                <div class="height-1"></div>
+              <a id="item-9" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/join">SQL Join</a>
+                <div class="height-1"></div>
+              <a id="item-10" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/left-join">SQL Left Join</a>
+                <div class="height-1"></div>
+              <a id="item-11" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/right-join">SQL Right Join</a>
+                <div class="height-1"></div>
+              <a id="item-12" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/full-join">SQL Full Join</a>
+                <div class="height-1"></div>
+              <a id="item-13" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/self-join">SQL Self Join</a>
+                <div class="height-1"></div>
+              <a id="item-14" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/update-join">SQL Update Join</a>
+                <div class="height-1"></div>
+              <a id="item-15" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/delete-join">SQL Delete Join</a>
+                <div class="height-1"></div>
+              <a id="item-16" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/subquery">SQL Subquery</a>
+                <div class="height-1"></div>
+              <a id="item-17" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/select-top">SQL Select Top</a>
+                <div class="height-1"></div>
+              <a id="item-18" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/select-into">SQL Select Into</a>
+                <div class="height-1"></div>
+              <a id="item-19" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/order-by-offset-fetch">SQL Offset-Fetch</a>
+                <div class="height-1"></div>
+              <a id="item-20" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/select-distinct">SQL Select Distinct</a>
+                <div class="height-1"></div>
+              <a id="item-21" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/select-min-max">SQL Min, Max</a>
+                <div class="height-1"></div>
+              <a id="item-22" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/select-count-sum-avg">SQL Count, Sum, Avg</a>
+                <div class="height-1"></div>
+              <a id="item-23" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-and-or-not">SQL And, Or, Not</a>
+                <div class="height-1"></div>
+              <a id="item-24" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/case">SQL Case</a>
+                <div class="height-1"></div>
+              <a id="item-25" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-between">SQL Between</a>
+                <div class="height-1"></div>
+              <a id="item-26" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-in">SQL In</a>
+                <div class="height-1"></div>
+              <a id="item-27" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-like">SQL Like</a>
+                <div class="height-1"></div>
+              <a id="item-28" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-isnull">SQL Is Null</a>
+                <div class="height-1"></div>
+              <a id="item-29" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/group-by">SQL Group By</a>
+                <div class="height-1"></div>
+              <a id="item-30" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/having">SQL Having</a>
+                <div class="height-1"></div>
+              <a id="item-31" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/union">SQL Union</a>
+                <div class="height-1"></div>
+              <a id="item-32" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/intersect">SQL Intersect</a>
+                <div class="height-1"></div>
+              <a id="item-33" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/except">SQL Except</a>
+                <div class="height-1"></div>
+              <a id="item-34" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/alias">SQL Alias</a>
+                <div class="height-1"></div>
+              <a id="item-35" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-any-all">SQL Any, All</a>
+                <div class="height-1"></div>
+              <a id="item-36" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/where-exists">SQL Exists</a>
+                <div class="height-1"></div>
+              <a id="item-37" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/insert-select">SQL Insert Select</a>
+                <div class="height-1"></div>
+              <a id="item-38" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/truncate">SQL Truncate</a>
+                <div class="height-1"></div>
+              <a id="item-39" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/comments">SQL Comments</a>
+                <div class="height-1"></div>
+              <a id="item-40" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/injection">SQL Injection</a>
+                <div class="height-1"></div>
+              <a id="item-41" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/keywords">SQL Keywords</a>
+                <div class="height-1"></div>
+              <a id="item-42" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 active" href="https://www.dofactory.com/sql/examples">SQL Examples</a>
+                <div class="height-1"></div>
+              <a id="item-43" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " data-isexternallink="&#39;true&#39;" href="https://www.dofactory.com/sql/reference">SQL Reference</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">SQL DATABASE</div>
+              <a id="item-45" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " data-iseditorlink="&#39;true&#39;" href="javascript:void(0);" onclick="window.open(&#39;/sql/editor&#39;, &#39;sandbox&#39;)">SQL Editor</a>
+                <div class="height-1"></div>
+              <a id="item-46" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/sample-database">Sample Database</a>
+                <div class="height-1"></div>
+              <div class="pl-15 mt-15 py-10 font-17 font-weight-semibold">SQL JOIN</div>
+              <a id="item-48" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/inner-join">SQL Inner Join</a>
+                <div class="height-1"></div>
+              <a id="item-49" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/outer-join">SQL Outer Join</a>
+                <div class="height-1"></div>
+              <a id="item-50" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/join-3-tables">SQL Join 3 Tables</a>
+                <div class="height-1"></div>
+              <a id="item-51" class="pl-15 list-group-item list-group-item-action border-0 font-15 xpt-6 " href="https://www.dofactory.com/sql/join-multiple-tables">SQL Join n Tables</a>
+                <div class="height-1"></div>
+        </div>
+        <input type="hidden" data-val="true" data-val-required="The ScrollOffset field is required." id="ScrollOffset" name="ScrollOffset" value="1362">
+      </nav>
+
+    </div>
+
+
+    <nav class="width-230 border-right">
+      <div class="height-70 pl-15 pt-27">
+        <div>
+          
+          <div class="pl-2 pt-2"><a class="no-underline darker-link font-weight-semibold font-16" onclick="$(&#39;#switcher&#39;).removeClass(&#39;tutorial-choice&#39;);" href="javacript:void(0)"><img class="align-baseline" src="./SQL Examples - Dofactory_files/arrow-left.jpg"> &nbsp;Back to SQL </a></div>
+        </div>
+      </div>
+
+      <div class="pl-15 py-15 mb-0 font-17 font-weight-semibold border-bottom " style="background-color: #b4e9ec; background-color: #345; color: white;
+">
+        Select Tutorial
+      </div>
+
+      <nav class="width-230 do-links pl-10 pt-20">
+
+        <ul style="list-style-type:none;margin-left:0;padding-left:0;">
+
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="https://www.dofactory.com/html">HTML Tutorial</a></li>
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="https://www.dofactory.com/html/ref">HTML Reference</a></li>
+
+          <li class="p-4 pt-20"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="https://www.dofactory.com/css">CSS Tutorial</a></li>
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black" href="https://www.dofactory.com/css/ref">CSS Reference</a></li>
+
+          <li class="p-4 pt-20"><i class="check-empty check-fill"></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/sql">SQL Tutorial</a></li>
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/sql/reference">SQL Reference</a></li>
+
+          <li class="p-4 pt-20"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/javascript">JavaScript Tutorial</a></li>
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/javascript/design-patterns">JavaScript Patterns</a></li>
+
+          <li class="p-4 pt-20"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color:black;" href="https://www.dofactory.com/net/design-patterns">C# Design Patterns</a></li>
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/csharp-coding-standards">C# Coding Standards</a></li>
+          
+          <li class="p-4 pt-20"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/connection-strings">Connection Strings</a></li>
+          <li class="p-4"><i class="check-empty "></i>&nbsp;&nbsp;&nbsp;<a class="no-underline" style="color: black;" href="https://www.dofactory.com/visual-studio-shortcuts">Visual Studio Shortcuts</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </div>
+</div>
+
+  </div>
+
+  <div class="tutorial-main">
+    
+    
+  <div class="">
+    <div class="m-auto" style="background: #f6f7f9;border:0px solid cyan; padding:20px 0px;">
+      <div class="text-center font-26 font-weight-semibold"><b style="color:salmon;">Earn income</b> with your data and sql skills</div>
+      <div class="pt-5 font-13 text-center">
+        Sign up and we'll send you the best freelance opportunities straight to
+        your inbox.<br>
+        We're building the largest self-service freelancing marketplace for people like you.
+      </div>
+      <form method="post" action="https://www.dofactory.com/freelancelist" novalidate="novalidate">
+        <div class="m-auto width-400 pt-12">
+          <div class="d-flex">
+            <input type="text" class="form-control width-230" placeholder="Email address" aria-label="Email address" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+            <button type="submit" class="btn-sm btn btn-warning ml-6">Send Me Opportunities</button>
+          </div>
+          <div class="text-left"><span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span></div>
+        </div>
+      <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7Eqsfry_x-H5JiWzkf4fvAyIJbuj0pNlsVWLYjzJn9OK0KKejvbQ0oYKKBvMe3eVWZVRiAEAAsBXKAkskK1PXxilfPtPhYQI-4BcCXzEREIdJvkhHqwoKjmjtV9p4nH9RsKU"></form>
+    </div>
+  </div>
+
+
+    <div class="pt-60 mt-5 pl-md-30 px-10 m-auto tutorial">
+
+
+      <div class="d-flex justify-content-around align-items-start">
+
+
+        <div class="w-100 m-auto" style="max-width:970px;">
+
+<div>
+<h1>SQL Examples</h1>
+
+
+<div class="d-flex mt-10 pt-10 d-block d-lg-none" xstyle="border-top:1px solid #ccd;">
+    <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="https://www.dofactory.com/sql/keywords" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title="Previous"><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; SQL Keywords &nbsp;</a>
+  </div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="https://www.dofactory.com/sql/reference" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title="Next">&nbsp; SQL Reference &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+
+<p class="mt-40 mb-20">
+  All SQL features presented in this tutorial come with <b>code examples</b>.<br>
+  Below are links to pages with example SQL query statements.
+</p>
+
+
+
+
+<a class="goto-target" id="select"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#39;#xselect&#39;).show();" onmouseout="$(&#39;#xselect&#39;).hide();">SQL SELECT</h3>
+  <h3 class="pl-12"><a id="xselect" class="d-block header-anchor" href="https://www.dofactory.com/sql/examples#select">#</a></h3>
+</div>
+
+
+<style>
+  .tutorial a.code-link {
+    color: firebrick !important;
+    text-decoration-color: #333 !important;
+    font-size: 15.5px;
+  }
+</style>
+
+<p>Click on any SELECT query below to learn more.</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/select" class="code-link">SELECT</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/select-top" class="code-link">SELECT TOP</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/select-into" class="code-link">SELECT INTO</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/select-min-max" class="code-link">SELECT MIN, MAX</a></td>
+    </tr>
+    <tr>
+      <td class="border-bottom"><a href="https://www.dofactory.com/sql/select-count-sum-avg" class="code-link">SELECT COUNT, SUM, AVG</a></td>
+    </tr>
+  </tbody></table>
+  <br>
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/join" class="code-link">SELECT JOIN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/left-join" class="code-link">SELECT LEFT JOIN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/right-join" class="code-link">SELECT RIGHT JOIN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/full-join" class="code-link">SELECT FULL JOIN</a></td>
+    </tr>
+    <tr>
+      <td class="border-bottom"><a href="https://www.dofactory.com/sql/self-join" class="code-link">SELECT SELF JOIN</a></td>
+    </tr>
+  </tbody></table>
+
+  <br>
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/inner-join" class="code-link">SELECT INNER JOIN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/outer-join" class="code-link">SELECT OUTER JOIN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/join-3-tables" class="code-link">SELECT JOIN 3 Tables</a></td>
+    </tr>
+    <tr>
+      <td class="border-bottom"><a href="https://www.dofactory.com/sql/join-multiple-tables" class="code-link">SELECT JOIN Multiple Tables</a></td>
+    </tr>
+  </tbody></table>
+
+  <br>
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/where" class="code-link">SELECT WHERE</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/like" class="code-link">SELECT WHERE LIKE</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/between" class="code-link">SELECT WHERE BETWEEN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/in" class="code-link">SELECT WHERE IN</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/exists" class="code-link">SELECT WHERE EXISTS</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/is-null" class="code-link">SELECT WHERE IS NULL</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/and" class="code-link">SELECT WHERE AND, OR, NOT</a></td>
+    </tr>
+    <tr>
+      <td class="border-bottom"><a href="https://www.dofactory.com/sql/any" class="code-link">SELECT WHERE ANY, ALL</a></td>
+    </tr>
+  </tbody></table>
+  <br>
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/order-by" class="code-link">SELECT ORDER BY</a></td>
+    </tr>
+    <tr>
+      <td class="border-bottom"><a href="https://www.dofactory.com/sql/order-by-offset-fetch" class="code-link">SELECT ORDER BY OFFSET-FETCH</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/group-by" class="code-link">SELECT GROUP BY</a></td>
+    </tr>
+    <tr>
+      <td class="border-bottom"><a href="https://www.dofactory.com/sql/having" class="code-link">SELECT GROUP BY HAVING</a></td>
+    </tr>
+  </tbody></table>
+  <br>
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/union" class="code-link">SELECT UNION</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/intersect" class="code-link">SELECT INTERSECT</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/except" class="code-link">SELECT EXCEPT</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/subquery" class="code-link">SELECT Subquery</a></td>
+    </tr>
+
+  </tbody></table>
+</div>
+
+
+<hr>
+
+
+
+<a class="goto-target" id="insert"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#39;#xinsert&#39;).show();" onmouseout="$(&#39;#xinsert&#39;).hide();">SQL INSERT</h3>
+  <h3 class="pl-12"><a id="xinsert" class="d-block header-anchor" href="https://www.dofactory.com/sql/examples#insert">#</a></h3>
+</div>
+
+
+
+<p>Click on any INSERT query to learn more.</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/insert" class="code-link">INSERT</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/where" class="code-link">INSERT WHERE</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/insert-select" class="code-link">INSERT INTO SELECT</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/order-by" class="code-link">INSERT WHERE ORDER BY</a></td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+<hr>
+
+
+
+<a class="goto-target" id="update"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#39;#xupdate&#39;).show();" onmouseout="$(&#39;#xupdate&#39;).hide();">SQL UPDATE</h3>
+  <h3 class="pl-12"><a id="xupdate" class="d-block header-anchor" href="https://www.dofactory.com/sql/examples#update">#</a></h3>
+</div>
+
+
+
+
+<p>Click on any UPDATE query to learn more.</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/update" class="code-link">UPDATE</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/where" class="code-link">UPDATE WHERE</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/order-by" class="code-link">UPDATE WHERE ORDER BY</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/update-join" class="code-link">UPDATE JOIN</a></td>
+    </tr>
+
+  </tbody></table>
+</div>
+
+
+<hr>
+
+
+
+<a class="goto-target" id="delete"></a>
+<div class="d-flex">
+  <h3 style="margin-left:-2px;font-weight:500 !important;" onmouseover="$(&#39;#xdelete&#39;).show();" onmouseout="$(&#39;#xdelete&#39;).hide();">SQL DELETE</h3>
+  <h3 class="pl-12"><a id="xdelete" class="d-block header-anchor" href="https://www.dofactory.com/sql/examples#delete">#</a></h3>
+</div>
+
+
+
+
+<p>Click on any DELETE query to learn more.</p>
+
+<div class="table-box">
+  <table class="table table-md bg-cream-100">
+    <tbody><tr>
+      <td><a href="https://www.dofactory.com/sql/delete" class="code-link">DELETE</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/where" class="code-link">DELETE WHERE</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/order-by" class="code-link">DELETE WHERE ORDER BY</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dofactory.com/sql/delete-join" class="code-link">DELETE JOIN</a></td>
+    </tr>
+  </tbody></table>
+</div>
+
+<hr>
+
+
+<a class="goto-target" id="like"></a>
+<div class="d-flex">
+  <h2 style="font-weight: 500 !important;" onmouseover="$(&#39;#xlike&#39;).show();" onmouseout="$(&#39;#xlike&#39;).hide();">You may also like</h2>
+  <h2><a id="xlike" style="display:none" class="d-block pl-12 header-anchor" href="https://www.dofactory.com/sql/examples#like">#</a></h2>
+</div>
+
+
+
+<p>
+  </p><div class="d-flex">
+    <div class="p-10">
+      <img src="./SQL Examples - Dofactory_files/show-like.png" class="img-fluid" loading="lazy">
+    </div>
+    <div class="pl-25 pt-5">
+      <ul>
+        <li>Our <a class="underline font-weight-semibold" href="https://www.dofactory.com/sql/select">Sql SELECT Tutorial</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="https://www.dofactory.com/sql/insert">Sql INSERT Tutorial</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="https://www.dofactory.com/sql/update">Sql UPDATE Tutorial</a></li>
+        <li>Our <a class="underline font-weight-semibold" href="https://www.dofactory.com/sql/delete">Sql DELETE Tutorial</a></li>
+      </ul>
+    </div>
+  </div>
+<p></p>
+
+
+<div class="d-flex mt-70 mb-20 py-10" style="border-top:1px solid #ccd;">
+        <div class="mr-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="https://www.dofactory.com/sql/keywords" data-toggle="xtooltip" data-placement="top" data-html="true" rel="prev" title="Previous"><i class="icon icon-arrow-left font-12" style="color:#3687a1;"></i>&nbsp; SQL Keywords &nbsp;</a></div>
+
+        <div class="ml-auto"><a class="btn btn-outline-submit-green btn-sm text-dark font-15 no-underline" style="color:#3687a1;" href="https://www.dofactory.com/sql/reference" data-toggle="xtooltip" data-placement="top" data-html="true" rel="next" title="Next">&nbsp; SQL Reference &nbsp;<i class="icon icon-arrow-right font-12" style="color:#3687a1;"></i></a></div>
+</div>
+
+<br>
+<br>
+
+</div>
+
+          
+  <div class="">
+    <div class="m-auto" style="background: #f6f7f9;border:0px solid cyan; padding:20px 0px;">
+      <div class="text-center font-26 font-weight-semibold"><b style="color:salmon;">Earn income</b> with your data and sql skills</div>
+      <div class="pt-5 font-13 text-center">
+        Sign up and we'll send you the best freelance opportunities straight to
+        your inbox.<br>
+        We're building the largest self-service freelancing marketplace for people like you.
+      </div>
+      <form method="post" action="https://www.dofactory.com/freelancelist" novalidate="novalidate">
+        <div class="m-auto width-400 pt-12">
+          <div class="d-flex">
+            <input type="text" class="form-control width-230" placeholder="Email address" aria-label="Email address" data-val="true" data-val-email="Invalid email address" data-val-required="Email is required." id="YourEmail" name="YourEmail" value="">
+            <button type="submit" class="btn-sm btn btn-warning ml-6">Send Me Opportunities</button>
+          </div>
+          <div class="text-left"><span class="field-validation-valid" data-valmsg-for="YourEmail" data-valmsg-replace="true"></span></div>
+        </div>
+      <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H5lvYk5XR9AjCnPSed7Eqsfry_x-H5JiWzkf4fvAyIJbuj0pNlsVWLYjzJn9OK0KKejvbQ0oYKKBvMe3eVWZVRiAEAAsBXKAkskK1PXxilfPtPhYQI-4BcCXzEREIdJvkhHqwoKjmjtV9p4nH9RsKU"></form>
+    </div>
+  </div>
+
+          <br>
+
+
+          <div class="bg-light p-10 mb-35 text-center">
+            <a class="darker-link" href="javascript:alert(&#39;Send feedback or errors on this page to feedback@dofactory.com.\r\nThank you!&#39;)">Feedback</a>
+          </div>
+
+          <div>
+            <div class="mt-50 pl-15 font-weight-semibold">Guides</div>
+          </div>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/insert">Sql INSERT</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/update">Sql UPDATE</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/delete">Sql DELETE</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/join">Sql JOIN</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/left-outer-join">Sql LEFT JOIN</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/right-outer-join">Sql RIGHT JOIN</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/where">Sql WHERE</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/where-like">Sql WHERE LIKE</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/where-in">Sql WHERE IN</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/order-by">Sql ORDER BY</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/group-by">Sql GROUP BY</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/subquery">Sql Subqueries</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="row mt-15">
+
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/identity">Sql Identity</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/primary-key">Sql Primary Key</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/foreign-key">Sql Foreign Key</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0  pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/create-table">Sql Create Table</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/create-view">Sql Create View</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/create-index">Sql Create Index</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/functions">Sql Functions</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/triggers">Sql Triggers</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/stored-procedures">Sql Procedures</a></li>
+                </ul>
+              </div>
+              <div class="col-xl-3 col-6">
+                <ul class="font-15 pl-15 pt-0 mt-0 pb-0 mb-0" style="list-style-type:none;">
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/training">Sql Training</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/developer">Sql Developers</a></li>
+                  <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/interview-questions">Sql Interviews</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+
+        <div class="mr-auto d-none d-lg-block do-toc pl-25 pt-25 width-230" style="min-width:230px !important;">
+          
+
+
+
+
+<div class="pl-15 font-weight-semibold">On this page</div>
+<ul class="font-15 pl-15 pt-15" style="list-style-type:none;">
+
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#">SQL Examples</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#select">SQL SELECT</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#insert">SQL INSERT</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#update">SQL UPDATE</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#delete">SQL DELETE</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#queries">SQL Queries</a></li>
+    <li style="margin-left:-14px;" class="ml-0 pl-0"><a class="no-underline" style="color:#003a49;" href="https://www.dofactory.com/sql/examples#like">You may also like</a></li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-right font-13 mr-12">
+  vsn 3.1
+</div>
+
+<a id="scrollUp" href="https://www.dofactory.com/sql/examples#" class="scroll-up rounded-circle text-center pt-7" style="right: 30px; display: inline;"><i class="icon-arrow-up font-13"></i></a>
+
+<script async="" src="./SQL Examples - Dofactory_files/clarity.js.download"></script><script type="text/javascript" async="" src="./SQL Examples - Dofactory_files/analytics.js.download"></script><script async="" src="./SQL Examples - Dofactory_files/3wdmv0ztvm"></script><script src="./SQL Examples - Dofactory_files/lang-sql.js.download"></script>
+    </div>
+
+    
+
+
+
+
+    
+
+
+    <a id="scrollUp" href="https://www.dofactory.com/sql/examples#" class="scroll-up rounded-circle text-center pt-7" style="right: 30px; display: inline;"><i class="icon-arrow-up font-13"></i></a>
+
+    
+    
+
+    
+        <script src="./SQL Examples - Dofactory_files/jquery.min.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/jquery.validate.min.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/jquery.validate.unobtrusive.min.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/prettify.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/bootstrap.bundle.min.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/bootstrap-datepicker.min.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/typeahead.jquery.min.js.download"></script>
+        <script src="./SQL Examples - Dofactory_files/app.min.js.download"></script>
+    
+
+
+
+    
+  <script type="text/javascript">
+
+    Dofactory.Utils.MenuOverflow.start();
+
+    $(function () {
+
+      Dofactory.Utils.ScriptToIFrame.start();
+      Dofactory.Utils.ScrollToTop.start();
+
+      // Open SQL Editor menu in a different browser tab
+      var menu = document.querySelectorAll('[data-iseditorlink]')[0];
+      menu.href = "javascript:void(0);";
+      menu.setAttribute('onclick', "window.open('/sql/editor', 'sandbox')");
+
+      // Devs also ask sections
+      $(".click").on('click', function () {
+        $(this).next("div.answer").slideToggle("fast");
+        $(this).find(".arrow").toggleClass('rotate');
+        $(this).find(".arrow").toggleClass('rotate-reset');
+      });
+    });
+
+  </script>
+
+
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./SQL Examples - Dofactory_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-1223200-3');
+    </script>
+    <!-- clarity.microsoft.com -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "3wdmv0ztvm");
+    </script>
+
+
+
+
+
+</body></html>
